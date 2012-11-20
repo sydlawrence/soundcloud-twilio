@@ -15,7 +15,6 @@ var config = {
 var express = require('express'),
     request = require('request'),
     util = require('util'),
-    twitter = require('twitter'),
     Twilio = require('twilio-js');
 
 /*
