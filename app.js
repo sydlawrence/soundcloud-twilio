@@ -7,6 +7,10 @@ var config = {
         account_sid: "xxx",
         auth_token: "xxx",
         number: "xxx"
+    },
+
+    soundcloud: {
+      id: "xxx"
     }
 };
 
@@ -75,10 +79,10 @@ app.configure('production', function(){
  */
 
 function getSoundcloudIDFromURL(url, callback) {
-    var url = "http://wemakeawesomesh.it/soundcloudID?format=json&url="+url;
-    request({url:url, json:true}, function (error, response, body) {
+    var url = "https://api.soundcloud.com/resolve.json?client_id="+config.soundcloud.id+"&url="+url;
+    request({url:url, json:true}, function (error, response, data) {
       if (!error && response.statusCode == 200) {
-        callback(body);
+        callback(data.id);
       }
     })
 }
