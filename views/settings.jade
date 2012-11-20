@@ -1,0 +1,24 @@
+h2 Settings
+p Hey #{user.username}, here you can configure your SMS settings
+
+form(name="input", action="", method="get")
+  input(type="hidden", name="followOnly", value="0")
+  input(type="hidden", name="smsOnMention", value="0")
+  input(type="hidden", name="follow_me", value="0")
+
+  p
+    label(for="phoneNumber") Your Phone Number (incl dialing code):
+    input(type="tel", id="phoneNumber", name="phoneNumber", value="+")
+
+  p
+    label(for="smsOnMention") SMS on any @mention:
+    input(type="checkbox", id="smsOnMention", name="smsOnMention", value="1", checked)
+  p
+    label(for="followOnly") Only from someone you follow:
+    input(type="checkbox", id="followOnly", name="followOnly", value="1", checked)
+
+  p
+    label(for="followMe") Follow the maker of appDotSMS (@sydlawrence):
+    input(type="checkbox", id="followMe", name="followMe", value="1", checked)
+  p
+    button(type="submit") Submit

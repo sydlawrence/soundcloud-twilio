@@ -1,0 +1,29 @@
+script
+  var socketID = ${socketID};
+
+p Make a phone call to over 240 countries, and play a sound from soundcloud down the phone.
+
+if (phonecall)
+  h2#phoneSuccess.success Woo \o/ Phone call made!
+
+form#mainform
+  p
+    label Enter a Soundcloud URL
+    input( name="url" )
+  p
+    label Enter a Phone Number (including country code, i.e. +44)
+    input( name="to" )
+  p
+
+    button( type="submit" ) Make it so, costs you a tweet!
+
+script
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19804545-20']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();

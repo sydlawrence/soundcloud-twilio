@@ -1,0 +1,9 @@
+{
+    "name": "alfredSMS"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.1"
+    , "twilio-js": ">= 0.0.1"
+  }
+}

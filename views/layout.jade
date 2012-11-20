@@ -1,0 +1,43 @@
+!!!
+html
+  head
+    meta(charset="UTF-8")
+
+    title Soundcloud Phone Call
+    link(rel="stylesheet", href="http://syddev.com/css/style.css?v=2")  
+    link(rel="stylesheet", href="http://syddev.com/css/screen.css?v=2") 
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    script(src='http://js.pusher.com/1.12/pusher.min.js')
+
+
+  body
+
+    header
+      h1 My Playground <a href="http://twitter.sydlawrence.com">@sydlawrence</a>
+
+    #poweredBy
+      a( href="http://twilio.com", style="position: fixed;top: 50px;right: 20px" )
+        img( src="http://www.twilio.com/packages/company/img/logos_icon_poweredbylarge.png", alt="powered by twilio")
+      a( href="http://soundcloud.com", style="position: fixed;top: 120px;right: 20px;height:50" )
+        img( src="images/soundcloud.gif", alt="powered by soundcloud", height=50)
+      
+
+    #main
+      h1 Soundcloud Phone Call
+      != body
+
+    footer
+      .addthis_toolbox.addthis_default_style(style="float:left;width:400px;padding:0;padding-left:20px;")
+        .addthis_button_facebook_like("fb:like:layout"="button_count")
+        .addthis_button_tweet
+        .addthis_button_google_plusone("g:plusone:size"="medium")
+      script(type="text/javascript", src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4eb96f9e279edd99")
+      a(href="http://sydlawrence.com") Handcrafted by Syd
+    
+    script(src='/javascripts/script.js')
+
+
+
+
+
